@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="chat.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins';
+      font-size: small;
+    }
+
+    .container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .left-div {
+      flex-grow: 1;
+      background-color: rgb(3, 80, 150);
+      padding: 20px;
+    }
+
+    .avatar {
+      width: 46px;
+      height: 46px;
+      background-color: rgba(217, 217, 227, 0.8);
+      margin-bottom: 20px;
+    }
+
+    .left-div ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .left-div li {
+      padding: 12px 72px 12px 12px;
+      background-color: rgb(2, 12, 22);
+      margin-bottom: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      color: #ffffff;
+    }
+
+    .left-div li:hover {
+      padding: 13px 73px 13px 13px;
+      background-color: rgba(217, 217, 227, 0.8);
+    }
+
+    .middle-div {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 5px;
+      overflow: auto;
+    }
+
+    .post-image-container {
+      border-radius: 5px;
+      overflow: hidden;
+      width: 100%;
+      height: auto;
+    }
+
+    .post-content {
+      border: 2px solid #6e6e80;
+      border-radius: 12.9px;
+      margin-bottom: 20px;
+    }
+
+    .post-image {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 13px;
+    }
+
+    .post-buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1481D8;
+      padding: 10px;
+      padding-bottom: 15px;
+      border-radius: 10px;
+      border: 3px solid #1481D8;
+      cursor: pointer;
+    }
+
+    .post-buttons button {
+      width: fit-content;
+      height: fit-content;
+      background-color: #1481D8;
+      border-radius: 5px;
+      border: 2px solid #165baa;
+      color: #ffffff;
+      cursor: pointer;
+      padding: 5px 10px;
+      transition: all 0.1s ease;
+      font-family: 'Poppins';
+      font-weight: 300;
+    }
+
+    .post-buttons button:hover {
+      transform: scale(1.1);
+      background-color: #165baa;
+    }
+
+    .right-div {
+      background-color: rgb(3, 80, 150);
+      padding: 20px;
+      display:
+
+ flex;
+      flex-direction: column;
+    }
+
+    .chat-section {
+      flex-grow: 1;
+      overflow: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .chat-bubble {
+      background-color: #f2f2f2;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 20px;
+      max-width: 70%;
+    }
+
+    .chat-bubble.john {
+      background-color: #c2c2c2;
+      color: #000000;
+      align-self: flex-start;
+    }
+
+    .chat-bubble.jane {
+      background-color: #67a3d9;
+      color: #ffffff;
+      align-self: flex-end;
+    }
+
+    .input-container {
+      display: flex;
+      margin-top: 20px;
+    }
+
+    .input-bar {
+      flex-grow: 1;
+      height: 30px;
+      padding: 5px;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+    }
+
+    .send-button {
+      background-color: #67a3d9;
+      color: #ffffff;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      padding: 5px 10px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+    .send-button:hover {
+      transform: scale(1.1);
+      outline: none;
+      border: none;
+    }
+
+    .icon {
+      display: flex;
+      justify-content: center;
+    }
+
+    .icon img {
+      width: 60px;
+      height: 60px;
+      padding-top: 40px;
+    }
+
+    /* Media queries for responsive layout */
+
+    @media screen and (min-width: 600px) {
+      .container {
+        flex-direction: row;
+      }
+
+      .left-div {
+        width: 244px;
+        height: auto;
+        padding-bottom: 20px;
+      }
+
+      .middle-div {
+        width: 660px;
+        height: auto;
+        margin: 0 10px;
+        padding-bottom: 20px;
+      }
+
+      .post-image-container {
+        width: auto;
+        height: 320px;
+      }
+
+      .right-div {
+        width: 300px;
+        height: auto;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left-div">
+      <!-- Left div content -->
+      <div class="icon">
+        <div><img src="icons8-female-profile-100.png" alt="" srcset="" height="60px" width="60px"></div>
+      </div>
+
+      <ul>
+        <li>Profile</li>
+        <li>Post</li>
+        <li>Settings</li>
+        <li>Log Out</li>
+      </ul>
+    </div>
+    <div class="middle-div">
+      <!-- Middle div content -->
+      <div class="post-content">
+        <div class="post-image-container">
+          <img src="postimg32.jpg" alt="Post Image" class="post-image">
+        </div>
+        <div class="post-buttons">
+          <button class="like-button">Like</button>
+          <button class="comment-button">Comment</button>
+          <button class="share-button">Share</button>
+        </div>
+      </div>
+      <div class="post-content">
+        <div class="post-image-container">
+          <img src="postimg33.png" alt="Post Image" class="post-image">
+        </div>
+        <div class="post-buttons">
+          <button class="like-button">Like
+
+</button>
+          <button class="comment-button">Comment</button>
+          <button class="share-button">Share</button>
+        </div>
+      </div>
+      <!-- Repeat the above pattern for more images -->
+    </div>
+    <div class="right-div">
+      <!-- Right div content -->
+      <div class="chat-section">
+        <div class="chat-bubble john">
+          <p>John: Hi, how are you?</p>
+        </div>
+        <div class="chat-bubble jane">
+          <p>Jane: I'm good, thanks!</p>
+        </div>
+        <div class="chat-bubble john">
+          <p>John: Did you finish the homework?</p>
+        </div>
+        <div class="chat-bubble jane">
+          <p>Jane: Not yet, I'm working on it.</p>
+        </div>
+        <!-- Repeat the chat bubbles for more messages -->
+      </div>
+      <div class="input-container">
+        <input type="text" class="input-bar" placeholder="Send a text">
+        <button class="send-button">Send</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

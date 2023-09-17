@@ -1,0 +1,98 @@
+div{
+    font-family: 'Poppins';
+  font-weight: 300;
+}
+.container {
+    margin-left: 35%;
+    margin-right: 20%;
+    margin-top: 6%;
+    max-width: 60%;
+    width: 250.672px;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    padding: 100px 75px;
+    border-radius: 10px;
+    font-family: 'Poppins';
+  font-weight: 300;
+}
+
+input {
+    display: inline;
+    margin-bottom: 50px;
+    width: 60%;
+    padding: 1.2em;
+    padding-right: 100px;
+    border-radius: 5px;
+    border: 0px solid white;
+    text-decoration: none;
+    font-family: 'Poppins';
+  font-weight: 300;
+}
+
+input[type="text"]:hover {
+    transform: scale(1.1);
+    font-weight: bold;
+}
+
+input[type="tel"]:hover {
+    transform: scale(1.1);
+    font-weight: bold;
+}
+
+input[type="password"]:hover {
+    transform: scale(1.1);
+    font-weight: bold;
+}
+
+input[type="date"]:hover {
+    transform: scale(1.1);
+    font-weight: bold;
+}
+
+a:hover {
+    transform: scale(1.1);
+    font-weight: bold;
+
+}
+
+a {
+    background-color: #1481D8;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: 0px solid #1481D8;
+    cursor: pointer;
+    text-decoration: none;
+    color: #ffff;
+    display: inline-flex;
+    width: fit-content;
+}
+
+#fname {
+    display: inline;
+    padding: 1.2em 10px;
+    width: 40%;
+    margin-right: 0;
+    margin-left: -9px;
+}
+
+#lname {
+    display: inline-flex;
+    margin-bottom: 50px;
+    padding: 1.2em 10px;
+    width: 40%;
+    margin-left: 10px;
+}
+#fname:hover{
+    display: inline;
+    transform: scale(1.1);
+    font-weight: bold;
+    width: 40%;
+}
+#lname:hover {
+    display: inline-flex;
+    margin-bottom: 50px;
+    transform: scale(1.1);
+    width: 40%;
+    margin-left: 10px;
+}
